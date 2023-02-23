@@ -1,0 +1,98 @@
+---
+import Base from "@layouts/Base.astro";
+import './../css/global.css';
+import Preloader from "@components/Preloader.astro";
+import typing_gif from './../assets/npm-preloader.gif';
+import CopyBtn from '../components/CopyBtn.jsx';
+import FeatureCard from '@components/FeatureCard.astro'
+---
+<Base>
+    <section class="section flex section-1">
+        <div class="hero-texts ">
+            <span class="heading main">Morese in One</span>
+            <a href="https://www.npmjs.com/package/morse-in-one" class="version" target="_blank">
+                <span class="">0.0.1</span>
+            </a>
+            <p class="heading">npm package for morse code</p>
+            <p class="heading">Encode, Decode, Json, Txt </p>
+            <p class="heading">And more ....</p>
+            <div class="install-code flex">
+                <code class="npm-i" id="npm-i">
+                    $ npm install morse-in-one
+                </code>
+                <CopyBtn text="npm install morse-in-one"/>
+            </div>
+            
+        </div>
+        <div class="">
+            <img src={typing_gif} width="400" alt=""/>
+        </div>
+    </section>
+
+    <section class="section section-2 flex">
+        <FeatureCard title={'Morse Code Encode'} content={'Morse in One is a npm package for morse code. It has many functionality like encoding sentences in morse code. Thee `mcConvert` function can convert sentences into morse code in linear time.'} />
+        <FeatureCard title={'Morse Code Encode'} content={'Morse in One is a npm package for morse code. It has many functionality like encoding sentences in morse code. Thee `mcConvert` function can convert sentences into morse code in linear time.'} />
+        <FeatureCard title={'Morse Code Encode'} content={'Morse in One is a npm package for morse code. It has many functionality like encoding sentences in morse code. Thee `mcConvert` function can convert sentences into morse code in linear time.'} />
+        <FeatureCard title={'Morse Code Encode'} content={'Morse in One is a npm package for morse code. It has many functionality like encoding sentences in morse code. Thee `mcConvert` function can convert sentences into morse code in linear time.'} />
+    </section>
+
+</Base>
+
+
+<style>
+    .section-1{
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 1rem;
+    }
+    .hero-texts{
+
+    }
+    .hero-texts .heading{
+        font-size: 45px;
+        color: grey;
+        text-shadow: 3px 3px rgb(223, 223, 223);
+    }
+    .hero-texts .version{
+        color: blue;
+        cursor: pointer;
+    }
+    .heading.main{
+        color: black;
+        font-size: 50px;
+    }
+    .heading:last-of-type{
+        margin-bottom: 2rem;
+    }
+    .npm-i{
+        font-size: 17px;
+        padding: .3rem 1rem;
+        border: 1px solid gray;
+
+    }
+    .install-code{
+        gap: .5rem;
+        justify-content: center;
+
+    }
+    .section-2{
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media screen and (max-width:480px){
+        .section-1 ,.section-2{
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero-texts .heading{
+            font-size: 30px;
+        }
+        .heading.main{
+            font-size: 40px;
+        }
+        .section-1{
+            padding: 0 1rem;
+        }
+    }
+    
+</style>

@@ -1,0 +1,54 @@
+@import "./variables.css";
+
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: gainsboro;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(172, 172, 172);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: grey;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section{
+    margin: 1rem;
+}
+.flex{
+    display: flex;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.bold{
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.hidden{
+    display: none;
+}
+@media screen and (max-width:480px) {
+    .section{
+        margin:.5rem;
+    }
+}

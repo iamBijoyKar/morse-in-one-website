@@ -1,0 +1,30 @@
+---
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import './../css/global.css';
+import npm_icon from './../assets/n-64.png';
+
+export interface Props{
+    title?:string
+}
+const {title='Morse in One'} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href={npm_icon} type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+</head>
+<body>
+    <Header/>
+    <slot />
+    <Footer/>
+</body>
+</html>
+<style>
+	
+    
+</style>

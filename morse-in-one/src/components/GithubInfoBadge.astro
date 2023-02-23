@@ -1,0 +1,35 @@
+---
+import github_logo from './../assets/github_2048_black.png';
+import './../css/global.css';
+
+export interface Props{
+    version:string,
+
+}
+const { version } = Astro.props;
+---
+
+
+<a href="https://github.com/iamBijoyKar/morse-in-one" target="_blank" class="github-badge flex">
+    <img src={github_logo} width="40" alt="github-logo"/>
+    <div class="info-box flex-col">
+        <p >npm package</p>
+        <p>{version}</p>
+        <p>MIT License</p>
+    </div>
+</a>
+
+<style>
+    .info-box p{
+        font-size: 12px;
+        line-height: 13px;
+    }
+    .github-badge{
+        gap: .5rem;
+    }
+    @media screen and (max-width:480px){
+        .github-badge{
+            display: none;
+        }
+    }
+</style>

@@ -1,0 +1,31 @@
+---
+import "./../css/global.css";
+export interface Props {
+  title: String;
+  content: String;
+}
+const { title, content } = Astro.props;
+---
+
+<div class="card flex-col">
+  <h1>{title}</h1>
+  <p>{content}</p>
+</div>
+
+<style>
+    .card{
+        width: 290px;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1rem;
+        border-radius: 5px;
+        gap: .6rem;
+        transition: .5s;
+
+    }
+    .card:hover , .card:focus{
+        box-shadow: 5px 5px 8px rgb(170, 170, 170);
+        background-color: var(--light-blue);
+        transition: .5s;
+    }
+</style>
