@@ -1,4 +1,5 @@
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import pkg from 'react-copy-to-clipboard';
+const { CopyToClipboard } = pkg
 import copy_logo from './../assets/copy-btn.png';
 CopyTo.props ={
     text:String
