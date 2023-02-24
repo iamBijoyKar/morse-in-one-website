@@ -14,7 +14,9 @@
 ::-webkit-scrollbar-thumb:hover {
     background: grey;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;

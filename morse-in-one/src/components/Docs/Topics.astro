@@ -1,0 +1,41 @@
+---
+import './../../css/global.css';
+
+
+---
+
+<aside class="docs-index flex-col">
+    <h1>Docs Index</h1>
+    <ul class="flex-col">
+        <li><a href="#overview">Get Started</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#encode">Morse Encode</a></li>
+        <li><a href="#decode">Morse Decode</a></li>
+        <li><a href="#class">Class Object</a></li>
+        <li><a href="#json">To Json</a></li>
+        <li><a href="#txt">To Txt</a></li>
+    </ul>
+</aside>
+
+<style>
+    .docs-index{
+        position: fixed;
+        left: 0;
+        top:6rem;
+        margin: 1rem ;
+        padding: 1rem 2rem;
+        background-color: var(--light-blue);
+        width: 260px;
+        height: fit-content;
+        border-radius: 5px;
+        gap: 1rem;
+    }
+    .docs-index ul{
+        gap: .3rem;
+    }
+    @media screen and (max-width:480px){
+        .docs-index{
+            display: none;
+        }
+    }
+</style>

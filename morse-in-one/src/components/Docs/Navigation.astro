@@ -1,0 +1,32 @@
+---
+import './../../css/global.css';
+
+
+
+---
+
+<aside class="navigation flex-col">
+    <h3>Navigation</h3>
+    <ul>
+        <li><a href="">Overview</a></li>
+    </ul>
+</aside>
+
+<style>
+    .navigation{
+        position: fixed;
+        top:10rem;
+        right: 0;
+        margin: 1rem;
+        background-color: gainsboro;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+    @media screen and (max-width:480px){
+        .navigation{
+            display: none;
+        }
+    }
+</style>

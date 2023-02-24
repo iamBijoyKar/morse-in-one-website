@@ -1,0 +1,88 @@
+---
+import './../../css/global.css';
+import npm_logo from './../../assets/npm.png';
+
+---
+
+<main>
+    <section class="doc-section flex-col" id="overview">
+        <h1>Overview</h1>
+        <p>Morse in One is a npm package for morse code. It has many functionality like encoding sentences in morse code. The `mcConvert` function can convert sentences into morse code in linear time.</p>
+        <a href="https://www.npmjs.com/package/morse-in-one" class="flex">
+            <img src={npm_logo} width="100" alt="">
+            package
+        </a>
+    </section>
+    <section class="doc-section flex-col" id="installation">
+        <h1>Installation</h1>
+        <p>Assuming that NodeJs and npm or any package manager are installed in your system. Make a project directory in your system.</p>
+        <code>$ mkdir project <br>
+            $ cd project
+        </code>
+        <p>Then initialize your package</p>
+        <code>$ npm init</code>
+        <p>If you are using npm : </p>
+        <code>$ npm install morse-in-one</code>
+        <p>If you are using yarn : </p>
+        <code>$ yarn add morse-in-one</code>
+    </section>
+    <section class="doc-section flex-col" id="encode">
+        <h1>Enode Morse</h1>
+    </section>
+    <section class="doc-section flex-col" id="decode">
+        <h1>Secode Morse</h1>
+    </section>
+    <section class="doc-section flex-col" id="class">
+        <h1>Class Object</h1>
+    </section>
+    <section class="doc-section flex-col" id="json">
+        <h1>To Json File Export</h1>
+    </section>
+    <section class="doc-section flex-col" id="txt">
+        <h1>To Txt File Export</h1>
+    </section>
+</main>
+
+<style>
+    main{
+        margin-left: 25%;
+        width: 75%;
+        padding: 1rem;
+        justify-content: start;
+        align-items: center;
+        
+    }
+    .doc-section{
+        margin-bottom: 2rem;
+    }
+    .doc-section h1{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .doc-section p{
+        font-size: 1.2rem;
+        color: gray;
+        margin-bottom: 1rem;
+        line-height: 24px;
+    }
+    .doc-section a{
+        gap: 5px;
+        align-items: center;
+    }
+    .doc-section code{
+        font-size: 18px;
+        border: solid 2px grey;
+        width: fit-content;
+        padding: .3rem 1rem;
+        margin-bottom: 1rem;
+    }
+    @media screen and (max-width:480px){
+        main{
+            width: 95%;
+            margin: 0;
+            height: fit-content;
+            overflow-y: none;
+            position: static;
+        }
+    }
+</style>
