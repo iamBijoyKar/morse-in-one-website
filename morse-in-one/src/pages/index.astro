@@ -30,10 +30,10 @@ import FeatureCard from '@components/FeatureCard.astro'
     </section>
 
     <section class="section section-2 flex">
-        <FeatureCard title={'Morse Code Encode'} content={'Morse in One is a npm package for morse code. It has many functionality like encoding sentences in morse code. Thee `mcConvert` function can convert sentences into morse code in linear time.'} />
-        <FeatureCard title={'Morse Code Encode'} content={'Morse in One is a npm package for morse code. It has many functionality like encoding sentences in morse code. Thee `mcConvert` function can convert sentences into morse code in linear time.'} />
-        <FeatureCard title={'Morse Code Encode'} content={'Morse in One is a npm package for morse code. It has many functionality like encoding sentences in morse code. Thee `mcConvert` function can convert sentences into morse code in linear time.'} />
-        <FeatureCard title={'Morse Code Encode'} content={'Morse in One is a npm package for morse code. It has many functionality like encoding sentences in morse code. Thee `mcConvert` function can convert sentences into morse code in linear time.'} />
+        <FeatureCard title={'Morse Encode'} content={'Morse in One is a npm package for morse code. It has many functionality like encoding sentences in morse code. Thee `mcConvert` function can convert sentences into morse code in linear time.'} />
+        <FeatureCard title={'Written in TypeScript'} content={'This package is written in Typescript.Due to Type checking and Error catching it is safe and accurate.   '} />
+        <FeatureCard title={'Json Output File'} content={'It converts the into morse code then create a json file of it with keys of `inputStr` and `outputCode`. `toJson` function is use to create the Json file. Class objects also have this feature. '} />
+        <FeatureCard title={'Linear Time Operations'} content={'It is quite fast. It dose the encode and decode in linear time with good accuracy.'} />
     </section>
 
 </Base>
@@ -78,6 +78,7 @@ import FeatureCard from '@components/FeatureCard.astro'
     .section-2{
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 4rem;
     }
     @media screen and (max-width:480px){
         .section-1 ,.section-2{

@@ -1,31 +1,76 @@
 ---
 import "./../css/global.css";
+import right_arrow_logo from './../assets/right-arrow.png';
 export interface Props {
   title: String;
   content: String;
+  buttonTitle?:string;
 }
-const { title, content } = Astro.props;
+const { title, content,buttonTitle='Try it out' } = Astro.props;
 ---
 
 <div class="card flex-col">
   <h1>{title}</h1>
   <p>{content}</p>
+  <button class="bold flex hidden">
+    {buttonTitle}
+    <img src={right_arrow_logo} width="10" alt="">
+  </button>
 </div>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(ele =>{
+    const btn = ele.querySelector('button');
+    ele.addEventListener('mouseover',(e)=>{
+      console.log(btn)
+      if(btn && btn.classList.contains('hidden')){
+        btn.classList.remove('hidden')
+        btn.style.transition = '1s'
+      }
+    })
+    ele.addEventListener('mouseout',(e)=>{
+      if(btn && !btn.classList.contains('hidden')){
+        btn.classList.add('hidden')
+      }
+    })
+  })
+  
+  
+</script>
+
 
 <style>
     .card{
         width: 290px;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         padding: 1rem 1rem;
         border-radius: 5px;
         gap: .6rem;
         transition: .5s;
-
+        height: 240px;
     }
     .card:hover , .card:focus{
         box-shadow: 5px 5px 8px rgb(170, 170, 170);
         background-color: var(--light-blue);
         transition: .5s;
+    }
+    .card button{
+      padding:5px .5rem ;
+      background-color: var(--pink);
+      border: solid 1px var(--pink);
+      border-radius: 3px;
+      transition: .5s;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4px;
+    }
+    .card button:hover{
+      transform: scale(1.1);
+      transition: .5s;
+      box-shadow: 3px 3px 3px rgb(133, 133, 133);
+
     }
 </style>

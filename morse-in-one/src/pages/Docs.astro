@@ -1,8 +1,14 @@
 ---
 import Base from "@layouts/Base.astro";
 import './../css/global.css';
+import Topics from "@components/Docs/Topics.astro";
+import Navigation from "@components/Docs/Navigation.astro";
+import MainDocs from "@components/Docs/MainDocs.astro";
 ---
 
 <Base>
-    <p>docs</p>
+    <div class="flex">
+        <Topics/>
+        <MainDocs/>
+    </div>
 </Base>
