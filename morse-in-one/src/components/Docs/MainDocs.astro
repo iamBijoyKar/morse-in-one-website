@@ -1,10 +1,12 @@
 ---
 import './../../css/global.css';
 import npm_logo from './../../assets/npm.png';
+import LiveCode from './LiveCode';
 
 ---
 
 <main>
+
     <section class="doc-section flex-col" id="overview">
         <h1>Overview</h1>
         <p>Morse in One is a npm package for morse code. It has many functionality like encoding sentences in morse code. The `mcConvert` function can convert sentences into morse code in linear time.</p>
@@ -13,36 +15,208 @@ import npm_logo from './../../assets/npm.png';
             package
         </a>
     </section>
+
     <section class="doc-section flex-col" id="installation">
         <h1>Installation</h1>
         <p>Assuming that NodeJs and npm or any package manager are installed in your system. Make a project directory in your system.</p>
-        <code>$ mkdir project <br>
+        <code class="prettyprint">$ mkdir project <br>
             $ cd project
         </code>
         <p>Then initialize your package</p>
-        <code>$ npm init</code>
+        <code class="prettyprint">$ npm init</code>
         <p>If you are using npm : </p>
-        <code>$ npm install morse-in-one</code>
+        <code class="prettyprint">$ npm install morse-in-one</code>
         <p>If you are using yarn : </p>
-        <code>$ yarn add morse-in-one</code>
+        <code class="prettyprint">$ yarn add morse-in-one</code>
     </section>
+
     <section class="doc-section flex-col" id="encode">
-        <h1>Enode Morse</h1>
+        <h1>Encode Morse</h1>
+        <p> It has many functionality like encoding sentences in morse code. Thee `mcConvert` function can convert sentences into morse code in linear time.</p>
+        <code class="prettyprint"> 
+            {`import { mcConvert } from 'morse-in-one';`}
+            <br>
+            {`console.log(mcConvert('hello world!'));`}
+        </code>
+        <p>Output : </p>
+        <code class="prettyprint">
+            .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--
+        </code>
     </section>
+
     <section class="doc-section flex-col" id="decode">
-        <h1>Secode Morse</h1>
+        <h1>Decode Morse</h1>
+        <p>This package has a morse decoder function `mcDecode`, it decodes morse code into English. </p>
+        <code class="prettyprint"> 
+            {`import { mcDecode } from 'morse-in-one';`}
+            <br>
+            {`console.log(mcDecode('.... . .-.. .-.. ---'));`}
+        </code>
+        <p>Output : </p>
+        <code class="prettyprint">
+            hello
+        </code>
     </section>
+
     <section class="doc-section flex-col" id="class">
         <h1>Class Object</h1>
+        <p>MorseCode class has more functionality with clean code.</p>
+        <code class="prettyprint"> 
+            {`import { MorseCode } from 'morse-in-one';`}
+            <br>
+            {`const obj = new MorseCode('Hi, I am a Developer')`}
+            <br>
+            {`console.log(obj.mcCode)`}
+        </code>
+        <p>Output : </p>
+        <code class="prettyprint">
+            .... .. --..-- / .. / .- -- / .- / -.. . ...- . .-.. --- .--. . .-.
+        </code>
+        <h3>MorseCode Class Attributes :</h3>
+        <table class="class-atr-table">
+            <tr>
+                <th>Attribute Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>realStr</td>
+                <td>Real input string</td>
+            </tr>
+            <tr>
+                <td>mcCode</td>
+                <td>Morse code of input string</td>
+            </tr>
+            <tr>
+                <td>strLen</td>
+                <td>Length of input string</td>
+            </tr>
+            <tr>
+                <td>mcLen</td>
+                <td>Length of morse code of input string</td>
+            </tr>
+        </table>
+        <h3 class="bold">strLen</h3>
+        <code class="prettyprint">
+            {`import { MorseCode } from 'morse-in-one';`}<br>
+            {`const newObj = new MorseCode('hi');`} <br>
+            {`console.log(newObj.strLen)`}
+        </code>
+        <p>Output : </p>
+        <code class="prettyprint">
+            2
+        </code>
+        <h3 class="bold">mcLen</h3>
+        <code class="prettyprint">
+            {`console.log(newObj.mcLen)//.... ..`}
+        </code>
+        <p>Output : </p>
+        <code class="prettyprint">
+            7 
+        </code>
+        <h3 class="bold">mcCode</h3>
+        <code class="prettyprint">
+            {`console.log(newObj.mcCode)//.... ..`}
+        </code>
+        <p>Output : </p>
+        <code class="prettyprint">
+            .... ..
+        </code>
+        <h3 class="bold">realStr</h3>
+        <code class="prettyprint">
+            {`console.log(newObj.realStr)//hi`}
+        </code>
+        <p>Output : </p>
+        <code class="prettyprint">
+            hi
+        </code>
+
+        <h3>MorseCode Class Methods :</h3>
+        <table class="class-atr-table">
+            <tr>
+                <th>Methods Name</th>
+                <th>Description</th>
+                <th>Parameteres</th>
+            </tr>
+            <tr>
+                <td>mcConvert()</td>
+                <td>Encode into morse code</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>mcDecode()</td>
+                <td>Decode morse code into English</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>calcStrLen()</td>
+                <td>Return length of input string</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>calcMcLen()</td>
+                <td>Return length of morse string</td>
+                <td>None</td>
+
+            </tr>
+            <tr>
+                <td>toJson()</td>
+                <td>Create a JSON file with inputStr and outputCode keys.</td>
+                <td>Single parameter : file name</td>
+            </tr>
+            <tr>
+                <td>toTxt()</td>
+                <td>Create a TXT file with morse code text.</td>
+                <td>Single parameter : file name</td>
+            </tr>
+        </table>
     </section>
+
     <section class="doc-section flex-col" id="json">
         <h1>To Json File Export</h1>
+        <p> This function takes two parameter, first is input string and a file name string and create a JSON file with "inputStr" and "outputCode" keys. </p>
+        <code class="prettyprint"> 
+            {`import { toJson } from 'morse-in-one';`}
+            <br>
+            {`const str = hello`}
+            <br>
+            {`toJson(str,'<file-name>');`}
+        </code>
+        <p>Output : </p>
+        <code class="prettyprint">
+            JSON file 
+            {
+                `
+                {
+                    "inputStr": "hello",
+                    "outputCode": ".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--"
+                }
+                `
+            }
+            
+        </code>
     </section>
+
     <section class="doc-section flex-col" id="txt">
         <h1>To Txt File Export</h1>
+        <p> This function takes two parameter, first is input string and a file name string and create a TXT file with morse code of input string.</p>
+        <code class="prettyprint"> 
+            {`import { toTxt } from 'morse-in-one';`}
+            <br>
+            {`const str = hello`}
+            <br>
+            {`toTxt(str,'<file-name>');`}
+        </code>
+        <p>Output : </p>
+        <code class="prettyprint">
+            TXT file contains 
+            .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--
+        </code>
     </section>
+
+
 </main>
 
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 <style>
     main{
         margin-left: 25%;
@@ -72,17 +246,39 @@ import npm_logo from './../../assets/npm.png';
     .doc-section code{
         font-size: 18px;
         border: solid 2px grey;
-        width: fit-content;
+        width: 60%;
         padding: .3rem 1rem;
         margin-bottom: 1rem;
     }
-    @media screen and (max-width:480px){
+    .doc-section h3{
+        margin-bottom: 1rem;
+    }
+    .doc-section table{
+        margin: 1rem;
+        text-align: center;
+    }
+    .class-atr-table  {
+        border: solid 2px black;
+        width: fit-content;
+    }
+    .class-atr-table tr:first-of-type{
+       font-weight: bold;
+        border: solid 1px black;
+    }
+    .class-atr-table tr,th,td{
+        padding: .3rem;
+        border: solid 1px black;
+    }
+    @media screen and (max-width:580px){
         main{
             width: 95%;
             margin: 0;
             height: fit-content;
             overflow-y: none;
             position: static;
+        }
+        .doc-section code{
+            width: 100%;
         }
     }
 </style>

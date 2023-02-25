@@ -25,11 +25,11 @@ import close_btn from './../assets/close.png';
         <img src={close_btn} width="20" class="hidden" id="close-btn" alt="">
     </div>
     <div class="info-links">
-        <GithubInfoBadge version="0.0.1" />
+        <GithubInfoBadge version="0.0.2" />
     </div>
     
 </header>
-<div class="sm-menu  flex-col ">
+<div class="sm-menu flex-col ">
     <a href="/" class="page-link">Home</a>
     <a href="/Docs" class="page-link">Docs</a>
     <a href="/About" class="page-link">About</a>
@@ -119,9 +119,11 @@ import close_btn from './../assets/close.png';
         left: 15%;
         display: none;
         z-index: 5;
+        color: black;
     }
-    .sm-menu > a{
-        color: white;
+    .sm-menu  a{
+        color: rgb(36, 36, 36);
+        font-weight: bold;
     }
     .sm-menu.active{
        display: flex;
